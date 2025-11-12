@@ -1,0 +1,135 @@
+Clause_No,Clause_Text,Predicted_Risk,Confidence (%),Risk_Score
+1,"Page 1 of 7 LEASE AGREEMENT Term of Lease : ___________ Average Annual Rent : ___________ Stamp Duty : ___________ This Lease Agreement is made at _________ this ______ day of ______ , 20__ between M/s.",Low,99.0,1
+2,"__________________ , a Partnership Firm, having its registered office at _____________________ , through its Partner _________________ , empowered to enter into this Lease Agreement on behalf of the Partnership Firm.",Low,99.8,1
+3,"Hereinafter referred to as the “Lessor” (which expression shall unless it b e repugnant to the context or meaning thereof, be deemed to include the partners or partner for the time being of the said firm, the survivors or survivor of them and the heirs, executors, administrators of the last surviving partner of the said firm) of t he One Part .",Low,99.8,1
+4,"AND ______________________________ , a company incorporated under the Companies Act, 1956 and having its registered office at __________________________________ and having one of its Branch Office at _____________________________ .",Low,99.9,1
+5,"Hereinafter r eferred to as the “Lessee” (which expression shall unless it be repugnant to the context or meaning thereof, be deemed to include its successors and assigns) of the Other Part;",Low,99.8,1
+6,The Lessor is the owner of and is entitled to the use and occupation of the Office Premises of a Built up area of ________ sq.,Medium,93.5,2
+7,on the Ground Floor in the building known as “______________” (“the said building”) situated at K hasra No.,Low,99.9,1
+8,______ at ____________________________ (Hereinafter refe rred to as the “sa id premises”) .,Low,99.9,1
+9,"The Lessee being in need of premises for its office use at _________ , has approached the Lessor in that behalf and the Lessor has agreed to give the said Premises on Lease basis to the Lessee for a period of _____ (_________ ) years on the terms and conditions as hereinafter appearing.",Low,98.0,1
+10,"The Lessor hereby represents and warrants that, the said Premises is the absolute property of the Lessor free from any charge or encumbrance and that no other person has any adverse right, title or interest t hereto and that the said Premises is not the subject matter of any order of attachment or other prohibitory order preventing the Lessor from allowing the Lessee to use and occupy the said Premises on Lease basis and that the Lessor is fully entitled to dea l with the said Premises and the incidental rights attached thereto.",High,99.6,3
+11,NOW THIS AGREEMENT WITNESSETH AND IT IS HEREBY AGREED BY AND BETW EEN THE PARTIES HERETO AS UNDER : 1.,Low,99.8,1
+12,The Lessor hereby permits the Lessee to use and occupy the said Premises on Lease basis at the Lease rent and on the terms and conditions contained in this Agreement.,Low,99.5,1
+13,The Lessor has also agreed to allow the Lessee to use the common facilities that are available in the said building as per the rules prevailing in that behalf.,Low,81.4,1
+14,(a) The period o f the Lease hereby granted by the Lessor to the Lessee in respect of the said Premises shall commence on ____________ and expire on ______________ .,Low,99.7,1
+15,"(b) It is hereby expressly agreed by and between the parties that this Agreement can be terminated anytime d uring the ___ (______ ) years period starting from ___________ and ending on _____________ at the option of the Lessee, by giving 3 (three) months notice in writing to the Lessor.",High,99.8,3
+16,"During the notice period, the monthly rent shall be appropriated fr om the Se curity deposit amount.",Medium,98.9,2
+17,The Lessor shall not have the option to terminate the Lease dur ing the entire Lease period of ___ (_____ ) years.,High,99.8,3
+18,Page 2 of 7 ( c ) The Lessor shall have the right to terminate the Lease forthwith by giving a notice in writing in that behalf to the Lessee if the Lessee fails to pay the monthly Lease Rent to the Lessor for consecutive 3 (three) months during the Lease period.,High,99.8,3
+19,The Lessee has agreed to pay to the Lessor a sum of Rs.,Medium,98.9,2
+20,"__________ /- (Rupees ___________ __ only) as an interest free refund able Security Deposit for the due performance and fulfillment of all the obligations, liabilities an d terms of the Lease Agreement.",Medium,98.3,2
+21,It is expressly agreed and declared by the parties hereto that the said deposit shall not carry any interest and the Lessee will not be entitled under any circumstances during the subsistence of the Lease Agreement to call back or demand the said deposit or any part thereof except in case of the expiry of the Lease or its sooner determination.,Medium,93.8,2
+22,"The interest free security deposi t shall be paid by cheque/ demand draft and shall be drawn in favour of the Lessor, viz.",Medium,98.8,2
+23,"It is further agreed and declared by the parties hereto that the said deposit shall remain with the Lessor and will be returned in full and with out interest to the Lessee on the expiry of the Lease Agreement or its sooner determination (subject to deduction of dues, if any) simultaneously upon the Lessee surrendering/handing over the said Premises to the Lessor in the same state and condition, sub ject to normal wear and tear.",Medium,99.2,2
+24,The Lessee agrees with the Lessor as under : (a) To pay to the Lessor a sum of Rs .,Medium,98.9,2
+25,_____________ /- (Rupees __________ only) at _________ as the monthly Lease Rent for the use of the said Premises together with the entitlement to us e the common facilities available.,Medium,99.0,2
+26,The above Lease rent shall be paid by the Lessee to the Lessor regularly on or before the 10th day of the following month to which it pertains.,Medium,97.6,2
+27,"The sums shall be paid subject to deduction of income tax at source, if any , at the prevailing rates.",Medium,98.8,2
+28,The payments shall be made by account payee cheques/demand drafts payable at par at _________ .,Medium,99.1,2
+29,The cheques/demand drafts shall be drawn in favour of the Lessor ________________.,Medium,99.3,2
+30,"(b) In addition to the aforesaid Lease Rent, the Less ee shall pay mo nthly maintenance charges @ Rs .",Medium,98.4,2
+31,on built -up area of the said premises and amounting to Rs .,Medium,99.5,2
+32,_______ /- (Rupees ______________ only) towards maintenance of common amenities.,Medium,99.5,2
+33,The above maintenance charges will be paid by the Lessee to the Lessor regularly on or before 10th day of the following month to which in pertains.,Medium,99.3,2
+34,"The sums shall be paid subject to deduction of Income -tax at source, if any, at the prevailing rates.",Medium,98.7,2
+35,The payments shall be made by account payee cheques/d emand drafts payable at par at _________ .,Medium,99.1,2
+36,The cheques/demand drafts shall be drawn in favour of the Lessor.,Medium,99.3,2
+37,"Future increase on the maintenance charges, if any, shall be borne and paid by the Lessee as per the building rules in this regard.",Medium,95.7,2
+38,"(c) The Lessor sha ll at its own costs provide a ____ KW Electricity Connection to the Lessee for the operation of Lights, Fans, Air Conditioners, Computers and other equipments within the premises.",Medium,99.5,2
+39,"However, Security Deposits, if any, shall be refunded to the Lessor, on sub mission of the original receipts of the Agency/Board.",Medium,99.3,2
+40,All other expenses will be borne by the Lessor.,Medium,99.3,2
+41,"The Electricity Connection should be in the name of the Lessee, so as to make payments directly to the Agency/Board against Electricity consumed by the L essee.",Medium,99.4,2
+42,The Lessee shall during the Lease period bear and pay all electricity charges in respect of electricity consumed in the said Premises as per the separate electricity meter provided therein or in accordance with the bills from time to time submitted by the agency/board supplying electricity to the Lessee or received directly by the Lessee.,Medium,99.2,2
+43,It is agreed between the parties that the Lessee shall not be liable for payment of any electricity charges for the period prior to and subsequent to the term of this Agreement.,Medium,96.5,2
+44,"After the expiry of the term of this Agreement or sooner determination as mentioned herein, in the event of the Lessor receiving any electricity bills for the electricity consumed during the term of the Lease period, such bills shall be pa id by the Lessee immediately on receipt of the relevant bills.",Medium,99.1,2
+45,The refund of the electricity deposit shall belong to and be paid/refunded to the Lessee only.,Medium,98.9,2
+46,The Lessor shall render all assistance and co -operation to the Lessee for obtaining such refund.,Medium,99.3,2
+47,"Page 3 of 7 (d) To use the said premises for commercial purposes and not to carry out any unlawful, illegal or dangerous activity in the said Premises.",High,74.6,3
+48,(e) To keep the said Premises in good and proper repair and condition (normal wear and tear accepted by the Lessor).,Medium,99.5,2
+49,(f) Not to carry out any structural alterations or additions or permanent nature in the said Premises except with the prior consent in writing of the Lessor.,Medium,62.8,2
+50,(g) Not to bring in or store upon the said Premises or any part thereof any hazardous goods or articles of combu stible or inflammable nature save the cooking gas/fuel in small quantities for normal use as permitted by the law.,Medium,95.5,2
+51,"(h) The Lessee shall not alter, cut, maim or injure any of the flooring, walls, partitions, ceiling of the said Premises without the previous con sent in writing of the Lessor or make or construct or make any additions to the said Premises;",Medium,88.5,2
+52,nor remove the same either before or after the expiry of the said term.,Medium,98.8,2
+53,"Minor repairs will be carried out and borne by the Lessee however all other repairs in t he nature of structural repairs, major leakage or repair caused due to tempest, fire, earthquakes or any other natural calamity, if required, would be carried out and borne by the Lessor.",Medium,99.4,2
+54,"(i) On the expiry of the Lease granted herein or its sooner determinatio n thereof, to remove itself, its employees (whether then in employment or not) and all other persons from the said Premises and also remove all furniture, fixtures and other articles and things brought in or upon the said Premises by the Lessee in pursuanc e of this Agreement and to ensure return of the said Premises to the Lessor in the same state and condition as they were on the date of this Agreement, normal wear and tear accepted.",Medium,99.4,2
+55,"The Lessor hereby agrees with the Lessee as follows : (a) If the Lessee shal l pay the Lease rent and maintenance charges as per clause 5(a) and maintenance charges as per cause 5(b) above hereby agreed upon and shall observe and perform all the terms and conditions of this Agreement and on its part required to be observed and perf ormed, the Lessee shall be entitled to use and occupy said Premises as a Lessee thereof without any interruption.",Medium,98.5,2
+56,"(b) The Lessor shall pay all outgoings (present and future) in respect of the said Premises (including but not limited to maintenance charges, sec urity charges, property taxes, municipa l taxes, municipal rates, cess imposed by or payable to any of the Government, statutory, local bodies and/or authorities) during the subs istence of the Lease.",Medium,98.8,2
+57,"However, Service Tax will be paid by the Lessee as per ap plicable rates, subject to submission of bills to the Lessee.",Medium,99.2,2
+58,"(c) The Lessor shall not let, sublet, lease or sell any area in the said building or any part thereof to any Company or business organizations, who are competitors in business of the non -banking Housing Finance of the Lessee.",High,99.1,3
+59,(d) The Lessor shall co -operate with the Lessee for getting necessary permissions from the government/municipal authorities etc.,Medium,98.1,2
+60,"in respect of matters relating to installation of the DG set, license, etc.",Medium,87.8,2
+61,(e) The Lessor has permitted th e Lessee to use the mutually agreed area for placement of DG set/parking purpose.,Low,97.8,1
+62,(f) The Lessee shall have the right to install a pole for lease line connectivity on the terrace of the building at no extra cost.,Medium,93.3,2
+63,(g) The Lessor agrees to provide to the Lessee adeq uate space for placing outdoor air -conditioner units and earthling pits of the Lessee in the said building at no additional cost.,Medium,98.9,2
+64,"Page 4 of 7 (h) The Lessor shall maintain the entire building, common passage, lifts, security and other common amenities at its own cost duri ng the entire term of the Lease.",Medium,99.3,2
+65,"(i) The Lessee shall be entitled to use open car and two wheeler parking space outside the said building for its employees, visitors and customers.",Low,94.9,1
+66,"Besides this, the Lessor agrees to provide to the Lessee Half Portion of the Stilt Area as res erved parking area for employees and customers of the Lessee.",Medium,99.5,2
+67,(j) The Lessor shall ensure continuous and sufficient supply of water in the said Premises.,Medium,99.5,2
+68,The Lessor shall also provide for adequate drainage systems.,Medium,99.6,2
+69,"(k) The Lessor has good and val id power, right and authority to grant the Lease hereby c reated in favour of the Lessee.",Low,76.8,1
+70,"The Lessor hereby agrees to indemnify and keep indemnified the Lessee at all times against any adverse claim, suit, legal proceedings, costs or loss of any nature, whe ther direct or indirect, incurred by the Lessee during the Lease period.",High,86.6,3
+71,"(l) Under the municipal zoning / user rules, the said Premises are capable of being used for commercial purpose and the Lessor has obtained all consents, permissions and approvals for the purpose thereof.",Medium,59.0,2
+72,"In case any of the consents, approvals or permissions are found to be false, incorrect or incomplete and the Lessee is required to bear any cost levied by any land Authority, the Lessor shall indemnify and keep indemnified the Lessee at all times from the same.",High,99.3,3
+73,"(m) The building in which the said premises are located is in accordance with the building plans duly approved by the Municipal Corporation/ Municipality/ Gram Panchayat or any other local authority and as per the applicable rules and regulations in that behalf and under the approved building plans, the Municipal Corporation/Municipality/Gram Panchayat or any other local authority has permitted the use of the said Premises for commercial use.",Low,97.8,1
+74,"(n) The Lessor shall observe and perform all th e Rules, Regulations and Bye -laws for the time being in force in respect of the said Premises and shall not do or omit to be done anything so that the Lease hereby created and occupation of the Lessee in respect of the said Premises is jeopardized.",Medium,97.5,2
+75,"In cas e the Lessor failing to observe this covenant and the Lessee has incurred any cost due to any claim or suit, the Lessor shall make good such loss to the Lessee.",Medium,98.7,2
+76,(o) The Municipal and any other taxes in respect of the said Premises that would be determined/fi xed/varied from time to time by the Municipal Corporation/Gram Panchayat or any other local authority shall be borne and paid by the Lessor alone.,Medium,98.7,2
+77,"It is agreed by and between the parties hereto as under : (a) On the expiry of this Lease or its sooner determin ation, the Lessee shall forthwith without any demur remove itself/all occupants and all its/their belongings, articles and things from the said Premises and shall quit and vacate and hand over the said Premises to the Lessor.",High,55.5,3
+78,"Upon the Lessee failing to v acate and hand over the said Premises on the expiry of this Lease, or its sooner determination, as the case may be, without prejudice to any right the Lessor may have in the matter and without conferring any right of any nature in favour of the Lessee, th e Lessee shall be required to pay compensation to the Lessor at the rate of Rs.",Medium,77.3,2
+79,_____ /- (Rupees ____________ only) per day as computed from the expiry of the said Lease period till the Lessee has handed over vacant and peaceful possession of the said Premis es to the Lessor as required under this Agreement.,Medium,99.1,2
+80,______ /- per day will be payable over and above the monthly Lease rent as mentioned in the clause 5(a) above.,Medium,97.7,2
+81,(b) The Lessee shall observe all the rules and regulations of any ad -hoc committee or body as may be in force from time to time in so far as they pertain to the use of the said Premises.,Medium,96.8,2
+82,"Provided that if any amount is to be deposited or paid to any Authority for any reason whatsoever, the same shall be immediately deposit ed or paid by the Lessor.",Medium,98.7,2
+83,It being the intention of the parties that the Lessee shall not be liable to deposit or pay any such amount to any Authority for any reasons whatsoever.,Medium,99.2,2
+84,"Page 5 of 7 (c) Upon expiry or sooner determination of this Agreement, the Lessee shall deli ver vacant and peaceful possession of the said Premises to the Lessor and the said Security Deposit shall be refunded by the Lessor to the Lessee simultaneously.",Medium,98.4,2
+85,"(d) The Lessee shall not assign, transfer, sublet, give on caretaker basis, or part with the posse ssion of the said Premises or any portion thereof in favour of any third party without prior w ritten consent of the Lessor.",High,99.5,3
+86,"However, the Lessee shall be entitled to sub -let or allow HDFC Group or HDFC promoted company or companies to occupy and use a part or parts of the said Premises on such terms and conditions as may be mutually agreed between the Lessee and it/them.",Medium,93.9,2
+87,(e) The Lessee shall not claim any tenancy or sub -tenancy or any other right or title in the said Premises and this Agreement shall not be con strued to create any such right whatsoever in favor of the Lessee.,Medium,92.8,2
+88,(f) The Lessor may enter the said Premises for inspection as per mutual convenience of both the parties by giving sufficient notice to the Lessee.,Medium,99.6,2
+89,"(g) The terms of this Agreement shall not be alter ed or added to, nor shall anything be omitted from this Agreement except by means of an Agreement in writing duly signed by the parties hereto.",High,62.4,3
+90,"Any such Agreement, when executed, shall be treated as a part of this Agreement.",Low,99.2,1
+91,"(h) The Lessee will be entitled t o bring in and install temporary furniture, fixtures, fittings, computers and air -conditioners, etc.",Medium,98.6,2
+92,"in the said Premises and the Lessor shall have no objection to the Lessee removing and taking away the said furniture, fixtures, fittings, computers and ai r- conditioners etc.",Medium,99.5,2
+93,that the Lessee has installed without damaging the said Premises upon expiry of this Lease or its sooner determination.,Medium,99.5,2
+94,(i) The Lessee shall affix name board of their Company at any place of directory of names provided in the said building and at the entrance of the said Premises.,Medium,99.2,2
+95,The Lessee shall also affix signage boards/glow signs at no extra cost on the entire front façade of the said Premises.,Medium,99.3,2
+96,"Statutory levies on signage, if any, will be directly paid by the Lessee to the Municipal Co rporation.",Medium,99.3,2
+97,(j) The monthly Lease Rent shall be increased by ___% (______ Percent ) of the last rent paid after expiry of every ____ (_____ ) years during the Lease period of ____ years and the rent payable shall be as under : - PERIOD RATE/SQ.,Medium,90.0,2
+98,AMOUNT (Per Mont h) _________ to _________ Rs.,Medium,98.9,2
+99,___________/ - _________ to _________ Rs.,Low,99.5,1
+100,___________/ - _________ to _________ Rs.,Low,99.5,1
+101,___________/ - _________ to _________ Rs.,Low,99.5,1
+102,___________/ - _________ to _________ Rs.,Low,99.5,1
+103,"___________/ - After expiry of the Lease period of ___ (______ ) years, the Lessee shall handover peaceful and vacant possession of the said premises to the lessor.",Medium,99.1,2
+104,"Notwithstanding what is stated herein, it is further agreed that during the period of the Lease, the Lessor shall be entitled to sell, mortgage or crease any third party right in the said Premises, provided that such sale/mortgage shall be subject to the Lease arrangement and the purchaser/mortgag ee is given not ice of such Lease arrangement.",High,99.8,3
+105,"Further, such sale/mortgage shall not in any way prejudi ce, jeopardize or diminish the right of the Lessee under this Agreement and any sale/mortgage in favour of a third party shall always be subject to the Le ase in favour of the Lessee.",Medium,91.4,2
+106,"If at any time during the period of the Lease, the said Premises or any part thereof shall be destroyed or damaged by fire or otherwise becomes unfit for occupation or use for any reason (including but not limited to water see page, cracks in the said Premises/building) not attributable to the default of the Lessee then the Lessee shall have a right to terminate this Agreement forthwith by giving a notice in writing in that behalf to the Lessor and on such termination the Lease hereby granted shall come to an end.",High,99.8,3
+107,"The Lessor represents to the Lessee that the title of the Lessor is clear, marketable and free from any encumbrances in respect of the said Premises.",Medium,99.4,2
+108,"It is further agreed that during the period of Lease, if the L essor s ells the said Premises, the same shall not in any way prejudice, jeopardize or diminish the right of the Lessee under this Lease Agreement or its right to recover the said deposit and any sale in favour of a third party shall always be subject to the Lease in favour of the Lessee.",Medium,98.5,2
+109,The Lessor shall cause the prospective purchaser to provide an irrevocable and unconditional undertaking addressed to the Lessee that it/he/she will pay the refundable interest -free security deposit of Rs.,Medium,99.0,2
+110,_____________/ - to the L essee as if it/he/she was the original Lessor for all purposes and to this intent the Lessor shall cause it/him/her to sign such documents as may be required by the Lessee in connection with the refund of the said deposit.,Medium,99.1,2
+111,"In case of sale of the said Premi ses, the Lessor shall obtain and hand over to the Lessee a written confirmation from the buyer(s) that the buyer(s) shall handover the deposit amount(s) to the Lessee as prescribed in this Agreement.",Medium,99.1,2
+112,The same shall also apply in case of any subsequent sale or transfer of the said Premises.,Medium,72.6,2
+113,"No additional liability of any kind shall occur to the Lessee on this account and if occurs, the same shall be indemnified by the Lessor to the Lessee.",High,97.7,3
+114,"Upon the expiry of the period of the Lease or its sooner determinati on, as the case may be, and upon the Lessee surrendering the use and enjoyment of the said Premises and giving vacant and peaceful charge thereof to the Lessor, the Lessor shall simultaneously refund to the Lessee witho ut interest the said amount of Rs.",Medium,98.2,2
+115,_________ /- being the Interest Fr ee Refundable Security Deposit.,Medium,99.1,2
+116,Thereupon the Lessee shall also have the right to withdraw the said electricity deposit deposited with the CSEB.,Medium,94.2,2
+117,"In the event of the Lessee is ready and willing to quit, vacate and hand over t o the Lessor charge of the said Premises on the expiry or sooner determination of the Lease and the Lessor fails, refuses or is unable to refund the said Interest Free Refundable Security Deposit then in that event;",Medium,91.0,2
+118,"(a) Notwithstanding what is provided in this Lease agreement and without prejudice to any other right that the Lessee may have against the Lessor, the Lessee shall not be bound and liable to vacate and hand over charge of the said Premises to the Lessor and the Lessee shall be entitled to continue t o use the said Premises without being liable to pay the Lease Rent and maintenance charges till such time the Lessor refunds to the Lessee the said Interest Free Refundable Security Deposit.",High,99.8,3
+119,Such holding over of the said Premises by the Lessee shall not c onstitute default by the Lessee under Lease Agreement.,High,99.7,3
+120,(b) The Lessor shall be bound and liable to pay to the Lessee interest at the rate of 2% (Two Percent) per month on the said Interest Free Refundable Security Deposit from the date of the expiry or sooner determination of the Lease till the date the Interest Free Refundable Security Deposit is refunded by the Lessor to the Lessee.,Medium,98.5,2
+121,All notices required to be served by either of the parties hereto upon the other shall be deemed to have been duly and effectual ly served if delivered by hand or addressed by Registered A.,Medium,43.9,2
+122,Post at the address of the recipient set out in this Agreement or such other address as the parties may notify each other and such services shall be deemed to have been affected in the case of delivery by hand on the date on which it is so delivered and in the case of delivery by Registered A.,Medium,87.6,2
+123,post on the expiry of the 3rd day after the date of such posting.,Medium,63.4,2
+124,"It is agreed by and between the parties hereto that the Stamp Duty and Registration Ch arges for registering this Agreement in accordance with the provisions of the Registration Act, 1908 or the notarization cost shall be borne and paid by the Lessee and Lessor equally.",Medium,99.3,2
+125,It is agreed by and between the parties hereto that no separate notice shall be required to be given by the Lessee to the Lessor for the refund of the said interest free refundable security deposit.,Medium,98.5,2
+126,The Lessor shall replace the flooring as mutually agreed and also construct the toilets as per the requirement of the Lessee.,Medium,99.5,2
+127,"The legal proceedings, if any, shall be held at _________ and conducted in the English Language.",Medium,98.7,2
+128,The Courts in _________ shall alone have exclusive jurisdiction with regard to this Lease Agreement.,High,99.7,3
+129,"SECURITY DEPOSIT Received of and from the within named L essee, i.",Medium,99.4,2
+130,"e ______________, the sum of Rs.",Medium,96.8,2
+131,_____________/ - (Rupees ______________________only) vide cheque No.,Low,96.9,1
+132,"__________ dated ________drawn on ________________, being the interest free refundable security Deposit as stated in Clause 3 of this Agreement (LESSOR) IN WITNESS ES WHEREOF the parties hereto have executed these presents the ____ day of _____, 20__ hereinabove written.",Medium,98.5,2
+133,_________________ ____________ LESSOR 2.,Low,99.9,1
+134,_________________ ____________ LESSEE Drafted By : ________________,Low,99.8,1

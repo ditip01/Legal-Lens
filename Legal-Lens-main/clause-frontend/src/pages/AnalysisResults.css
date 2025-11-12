@@ -1,0 +1,119 @@
+/* ---------- General Container ---------- */
+.analysis-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(15, 30, 60, 0.08);
+  padding: 2.5rem;
+  color: #222;
+  font-family: "Inter", sans-serif;
+}
+
+/* ---------- Header / Info Box ---------- */
+.analysis-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.analysis-header h2 {
+  margin-bottom: 0.4rem;
+  color: #003366;
+  font-size: 1.8rem;
+}
+
+.analysis-info {
+  background: #f5f9ff;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  display: inline-block;
+  box-shadow: inset 0 0 0 1px rgba(32, 119, 255, 0.05);
+}
+
+.analysis-info p {
+  margin: 4px 0;
+  font-weight: 500;
+}
+
+/* ---------- Table Container ---------- */
+.table-wrapper {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: inset 0 0 0 1px rgba(32, 119, 255, 0.05);
+  margin-bottom: 2rem;
+}
+
+.clauses-table-container {
+  max-height: 450px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.clauses-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.clauses-table th,
+.clauses-table td {
+  border: 1px solid #ddd;
+  padding: 10px 14px;
+  vertical-align: top;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.clauses-table th {
+  background-color: #2077ff;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  text-align: left;
+}
+
+/* ---------- Buttons ---------- */
+.buttons-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.download-btn {
+  background: linear-gradient(90deg, #2077ff, #0054c2);
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  min-width: 220px;
+  box-shadow: 0 10px 24px rgba(32, 119, 255, 0.18);
+  transition: background 0.2s ease;
+}
+
+.download-btn:hover {
+  background: #0054c2;
+}
+
+.back-btn {
+  background: #e7ebf6;
+  color: #333;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  min-width: 220px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  transition: background 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #d8deea;
+}
