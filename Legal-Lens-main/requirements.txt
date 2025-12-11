@@ -1,0 +1,61 @@
+# Legal-Lens dependency overview
+# -------------------------------
+# Python packages (install with pip inside a virtualenv)
+
+pandas
+numpy
+tqdm
+openpyxl
+PyPDF2
+PyMuPDF
+Flask
+transformers
+datasets
+scikit-learn
+matplotlib
+
+# Optional tokenizer helpers (install if you hit import errors)
+# sentencepiece
+# tokenizers
+
+# PyTorch (torch) is required to run/train the model but must be installed
+# separately according to your OS and CUDA support. Use the official selector:
+# https://pytorch.org/get-started/locally/
+# Example (CPU-only) - run after activating your venv:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+
+
+# -------------------------------
+# Node.js / React dependencies (NOT installed via pip)
+# Listed here for convenience; install via `npm install` inside each folder.
+
+# Backend (install inside `server/`)
+axios
+bcryptjs
+cors
+dotenv
+express
+jsonwebtoken
+jspdf
+jspdf-autotable
+lucide-react
+mongoose
+multer
+(dev) nodemon
+
+# Frontend / React (install inside `clause-frontend/`)
+axios
+jspdf
+jspdf-autotable
+lucide-react
+mongodb
+react
+react-dom
+react-router-dom
+react-scripts
+web-vitals
+
+# Install Node dependencies (PowerShell example):
+# cd .\Legal-Lens-main\clause-frontend ; npm install
+# cd ..\server ; npm install
+
