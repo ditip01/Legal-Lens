@@ -1,12 +1,16 @@
 import { useEffect, useState, useContext } from 'react'
 import { UserContext } from '../context/UserContext'
+import { useNavigate } from 'react-router-dom'
 
 export default function AdminDashboard() {
   const { user } = useContext(UserContext)
+  const navigate = useNavigate()
   const [users, setUsers] = useState([])
   const [search, setSearch] = useState('')
   const [filteredUsers, setFilteredUsers] = useState([])
   const [message, setMessage] = useState('')
+  const [adminFile, setAdminFile] = useState(null)
+  const [uploadingAdmin, setUploadingAdmin] = useState(false)
 
 
   // Fetch all users (Admins only)
@@ -16,11 +20,18 @@ export default function AdminDashboard() {
         const token = localStorage.getItem('token')
         if (!token) return setMessage('⚠️ No token found. Please log in as Admin.')
 
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/admin/users`, {
-          headers: { Authorization: `Bearer ${token}` },
-        })
+        // Build resilient API base (fall back to localhost:5000 for dev)
+        const rawBase = process.env.REACT_APP_API_URL
+        let apiBase = ''
+        if (rawBase && rawBase.startsWith('http')) apiBase = rawBase.replace(/\/$/, '')
+        else if (rawBase && rawBase.startsWith(':')) apiBase = `http://localhost${rawBase}`
+        else apiBase = rawBase || 'http://localhost:5000'
 
-        const data = await response.json()
+        const usersUrl = `${apiBase}/api/admin/users`
+        const response = await fetch(usersUrl, { headers: { Authorization: `Bearer ${token}` } })
+
+        const contentType = response.headers.get('content-type') || ''
+        const data = contentType.includes('application/json') ? await response.json() : null
         if (response.ok) {
           setUsers(data)
           setFilteredUsers(data)
@@ -36,6 +47,58 @@ export default function AdminDashboard() {
 
     fetchUsers()
   }, [])
+
+  // Admin upload handler (allows admins to upload a document for analysis)
+  const handleAdminFileChange = (e) => setAdminFile(e.target.files[0])
+
+  const handleAdminUpload = async (e) => {
+    e.preventDefault()
+    if (!adminFile) return setMessage('⚠️ Please select a file to upload')
+
+    setUploadingAdmin(true)
+    setMessage('🔍 Uploading and analyzing document...')
+    try {
+      const token = localStorage.getItem('token')
+      if (!token) {
+        setMessage('🔒 Not authenticated as admin. Please log in.')
+        return
+      }
+
+      const formData = new FormData()
+      formData.append('file', adminFile)
+
+      const rawBase = process.env.REACT_APP_API_URL
+      let apiBase = ''
+      if (rawBase && rawBase.startsWith('http')) apiBase = rawBase.replace(/\/$/, '')
+      else if (rawBase && rawBase.startsWith(':')) apiBase = `http://localhost${rawBase}`
+      else apiBase = rawBase || 'http://localhost:5000'
+
+      const res = await fetch(`${apiBase}/api/upload`, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${token}` },
+        body: formData,
+      })
+
+      if (res.status === 401) {
+        setMessage('🔒 Session expired. Please login again.')
+        setTimeout(() => (window.location.href = '/login'), 1000)
+        return
+      }
+
+      const data = await res.json()
+      if (!res.ok) throw new Error(data.error || 'Upload failed')
+
+      setMessage('✅ File uploaded successfully. Redirecting to results...')
+      setAdminFile(null)
+      // navigate to analysis page
+      if (data.uploadId) navigate(`/analysis/${data.uploadId}`)
+    } catch (err) {
+      console.error('Admin upload error:', err)
+      setMessage('❌ Upload failed. Please try again.')
+    } finally {
+      setUploadingAdmin(false)
+    }
+  }
 
   // Filter users by name, email, or Aadhaar
   useEffect(() => {
@@ -57,7 +120,9 @@ export default function AdminDashboard() {
   return (
     <div className="admin-container">
       <h2 style={{ color: '#003366', fontWeight: 700 }}>Admin Dashboard</h2>
-      <p style={{ color: '#555' }}>Manage users and view their upload history.</p>
+      <p style={{ color: '#555' }}>
+        Manage users and view their upload history. {user?.name ? `Hello, ${user.name}` : ''}
+      </p>
 
       <div
         style={{
@@ -110,6 +175,7 @@ export default function AdminDashboard() {
                     borderRadius: '6px',
                     transition: 'background 0.2s',
                   }}
+                  onClick={() => navigate(`/admin-uploads/${u._id}`, { state: { user: u } })}
                   onMouseOver={(e) => (e.currentTarget.style.background = '#f8faff')}
                   onMouseOut={(e) => (e.currentTarget.style.background = 'transparent')}
                 >
@@ -134,8 +200,48 @@ export default function AdminDashboard() {
         >
           <h3 style={{ color: '#003366', textAlign: 'center' }}>Upload History</h3>
           <p style={{ textAlign: 'center', color: '#666' }}>
-            Select a user to view uploads.
+            View uploads for a specific user or view all uploads.
           </p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', marginTop: '14px' }}>
+            <button
+              onClick={() => navigate('/admin-uploads')}
+              style={{
+                background: '#2077ff',
+                color: '#fff',
+                border: 'none',
+                padding: '8px 12px',
+                borderRadius: '8px',
+                cursor: 'pointer',
+              }}
+            >
+              View all uploads
+            </button>
+          </div>
+
+          {/* Admin quick-upload form */}
+          <div style={{ marginTop: '18px', textAlign: 'center' }}>
+            <form onSubmit={handleAdminUpload}>
+              <input type="file" accept="application/pdf" onChange={handleAdminFileChange} />
+              <div style={{ marginTop: '10px' }}>
+                <button
+                  type="submit"
+                  disabled={uploadingAdmin}
+                  style={{
+                    background: '#28a745',
+                    color: '#fff',
+                    border: 'none',
+                    padding: '8px 12px',
+                    borderRadius: '8px',
+                    cursor: 'pointer',
+                    marginLeft: '8px',
+                  }}
+                >
+                  {uploadingAdmin ? 'Uploading...' : 'Upload as Admin'}
+                </button>
+              </div>
+            </form>
+            {message && <p style={{ marginTop: '12px', color: '#444' }}>{message}</p>}
+          </div>
         </div>
       </div>
     </div>

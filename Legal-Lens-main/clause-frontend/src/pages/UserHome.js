@@ -10,28 +10,7 @@ export default function UserHome() {
 
   return (
     <div className="home-section" style={{ position: 'relative' }}>
-      {/* 🔹 Logout button */}
-      <button
-        onClick={logoutUser}
-        style={{
-          position: 'absolute',
-          top: '20px',
-          right: '40px',
-          background: 'linear-gradient(90deg, #d11a2a, #a50b15)',
-          color: '#fff',
-          border: 'none',
-          padding: '10px 20px',
-          borderRadius: '40px',
-          fontWeight: 600,
-          cursor: 'pointer',
-          boxShadow: '0 4px 10px rgba(209, 26, 42, 0.3)',
-          transition: 'all 0.2s ease-in-out',
-        }}
-        onMouseOver={(e) => (e.target.style.background = 'linear-gradient(90deg, #a50b15, #700909)')}
-        onMouseOut={(e) => (e.target.style.background = 'linear-gradient(90deg, #d11a2a, #a50b15)')}
-      >
-        Logout
-      </button>
+      {/* Profile/menu removed from page - navbar contains the profile chip now */}
 
       {/* 🔹 Left Side (Image) */}
       <div className="home-left">

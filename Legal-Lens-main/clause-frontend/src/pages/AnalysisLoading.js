@@ -10,15 +10,18 @@ export default function AnalysisLoading() {
   useEffect(() => {
     const fetchStatus = async () => {
       try {
-        const response = await fetch(
-          `${process.env.REACT_APP_API_URL}/api/upload-status/${id}`,
-          {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
-          }
-        );
-        const data = await response.json();
+        const rawBase = process.env.REACT_APP_API_URL
+        let apiBase = ''
+        if (rawBase && rawBase.startsWith('http')) apiBase = rawBase.replace(/\/$/, '')
+        else if (rawBase && rawBase.startsWith(':')) apiBase = `http://localhost${rawBase}`
+        else apiBase = rawBase || 'http://localhost:5000'
+
+        const response = await fetch(`${apiBase}/api/upload-status/${id}`, {
+          headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+        })
+
+        const contentType = response.headers.get('content-type') || ''
+        const data = contentType.includes('application/json') ? await response.json() : null
 
         if (response.ok && data.upload) {
           setFileName(data.upload.fileName || "your file");

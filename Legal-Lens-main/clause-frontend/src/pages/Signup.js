@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export default function Signup() {
@@ -89,12 +89,20 @@ export default function Signup() {
     }
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/signup`, {
+      // Build resilient API base (fallback for local dev)
+      const rawBase = process.env.REACT_APP_API_URL
+      let apiBase = ''
+      if (rawBase && rawBase.startsWith('http')) apiBase = rawBase.replace(/\/$/, '')
+      else if (rawBase && rawBase.startsWith(':')) apiBase = `http://localhost${rawBase}`
+      else apiBase = rawBase || 'http://localhost:5000'
+
+      const response = await fetch(`${apiBase}/api/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, aadhar, address, password }),
       })
-      const data = await response.json()
+      const contentType = response.headers.get('content-type') || ''
+      const data = contentType.includes('application/json') ? await response.json() : null
       if (response.ok) {
         setMessage('✅ Signup successful! Redirecting to login...')
         setTimeout(() => navigate('/login'), 1200)

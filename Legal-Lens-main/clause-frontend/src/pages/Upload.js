@@ -6,7 +6,6 @@ export default function Upload() {
   const [file, setFile] = useState(null);
   const [message, setMessage] = useState("");
   const [uploading, setUploading] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false);
   const { user, logoutUser } = useContext(UserContext);
   const navigate = useNavigate();
 
@@ -32,6 +31,12 @@ export default function Upload() {
 
     try {
       const token = localStorage.getItem("token");
+      if (!token) {
+        setMessage("🔒 Session expired or not authenticated. Redirecting to login...");
+        // give the message a moment then logout/redirect
+        setTimeout(() => logoutUser(), 1200);
+        return;
+      }
       const apiBase = "http://localhost:5000";
       const formData = new FormData();
       formData.append("file", file);
@@ -43,6 +48,14 @@ export default function Upload() {
         },
         body: formData,
       });
+
+      // If the token expired the server will return 401 — handle that explicitly
+      if (res.status === 401) {
+        setMessage("🔒 Session expired. Please login again to upload documents.");
+        // clear auth and redirect to login quickly
+        setTimeout(() => logoutUser(), 1200);
+        return;
+      }
 
       const data = await res.json();
       console.log("📦 Backend raw response:", data);
@@ -76,92 +89,7 @@ export default function Upload() {
 
   return (
     <div className="upload-page">
-      {/* Profile Dropdown */}
-      <div style={{ position: "absolute", top: "20px", right: "40px" }}>
-        <div
-          onClick={() => setShowDropdown(!showDropdown)}
-          style={{
-            background: "linear-gradient(90deg, #2077ff, #0054c2)",
-            color: "#fff",
-            display: "flex",
-            alignItems: "center",
-            padding: "8px 16px",
-            borderRadius: "40px",
-            boxShadow: "0 4px 12px rgba(32, 119, 255, 0.25)",
-            gap: "10px",
-            cursor: "pointer",
-          }}
-        >
-          <div
-            style={{
-              backgroundColor: "#fff",
-              color: "#0054c2",
-              borderRadius: "50%",
-              width: "32px",
-              height: "32px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontWeight: 700,
-            }}
-          >
-            {user?.name
-              ? user.name
-                  .split(" ")
-                  .map((n) => n[0])
-                  .join("")
-                  .toUpperCase()
-              : "U"}
-          </div>
-          <span style={{ fontWeight: 600 }}>{user?.name || "User"}</span>
-        </div>
-
-        {showDropdown && (
-          <div
-            style={{
-              position: "absolute",
-              right: 0,
-              top: "60px",
-              background: "#fff",
-              borderRadius: "10px",
-              boxShadow: "0 8px 20px rgba(0, 0, 0, 0.1)",
-              width: "200px",
-              zIndex: 10,
-            }}
-          >
-            <button
-              style={{
-                width: "100%",
-                padding: "12px 16px",
-                border: "none",
-                background: "transparent",
-                textAlign: "left",
-                cursor: "pointer",
-                fontSize: "0.95rem",
-                color: "#0054c2",
-              }}
-              onClick={() => alert("📜 Upload History coming soon!")}
-            >
-              📜 Upload History
-            </button>
-            <button
-              style={{
-                width: "100%",
-                padding: "12px 16px",
-                border: "none",
-                background: "transparent",
-                textAlign: "left",
-                cursor: "pointer",
-                fontSize: "0.95rem",
-                color: "#d11a2a",
-              }}
-              onClick={logoutUser}
-            >
-              🚪 Logout
-            </button>
-          </div>
-        )}
-      </div>
+      {/* profile UI moved to Navbar — no duplicate here */}
 
       {/* Upload Section */}
       <div className="auth-container" style={{ marginTop: "120px", width: "420px" }}>

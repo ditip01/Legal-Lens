@@ -1,15 +1,16 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { UserContext } from '../context/UserContext'
 
 export default function ProfileMenu({ user }) {
   const [open, setOpen] = useState(false)
   const navigate = useNavigate()
+  const { logoutUser } = useContext(UserContext)
 
   const handleLogout = () => {
-    localStorage.removeItem('token')
-    localStorage.removeItem('user')
+    // use central logout so context is cleared
+    logoutUser()
     navigate('/login')
-    window.location.reload()
   }
 
   return (
@@ -20,42 +21,52 @@ export default function ProfileMenu({ user }) {
           display: 'flex',
           alignItems: 'center',
           cursor: 'pointer',
-          gap: '10px',
-          background: 'linear-gradient(90deg, #2077ff, #0054c2)',
+          gap: '12px',
+          background: 'linear-gradient(90deg,#2b8bff,#0b63e6)',
           color: '#fff',
-          padding: '8px 14px',
-          borderRadius: '50px',
-          fontWeight: 600,
-          boxShadow: '0 4px 12px rgba(32, 119, 255, 0.25)',
+          padding: '8px 18px',
+          borderRadius: 9999,
+          fontWeight: 700,
+          boxShadow: '0 10px 30px rgba(11,99,230,0.22)',
         }}
       >
-        <img
-          src={`https://api.dicebear.com/7.x/initials/svg?seed=${user?.name || 'U'}`}
-          alt="Profile"
+        <div
           style={{
-            width: '32px',
-            height: '32px',
+            width: 40,
+            height: 40,
             borderRadius: '50%',
             background: '#fff',
-            padding: '2px',
+            color: '#0b63e6',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontWeight: 700,
+            marginLeft: -6,
+            boxShadow: '0 6px 18px rgba(11,99,230,0.18)',
+            border: '3px solid rgba(255,255,255,0.85)',
           }}
-        />
-        <span>{user?.name || 'User'}</span>
+        >
+          {(user?.name || 'U').charAt(0).toUpperCase()}
+        </div>
+        <div style={{ textAlign: 'left', lineHeight: 1 }}>
+          <div style={{ fontWeight: 800 }}>{user?.name?.split(' ')[0] || 'User'}</div>
+          <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.9)' }}>{user?.email}</div>
+        </div>
       </div>
 
       {open && (
         <div
           style={{
             position: 'absolute',
-            top: '110%',
             right: 0,
+            top: 64,
             background: '#fff',
-            boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
+            boxShadow: '0 8px 30px rgba(0,0,0,0.06)',
             borderRadius: '10px',
-            width: '180px',
+            width: '200px',
             zIndex: 1000,
             overflow: 'hidden',
-            animation: 'fadeIn 0.2s ease',
+            animation: 'fadeIn 0.15s ease',
           }}
         >
           <div
@@ -70,7 +81,10 @@ export default function ProfileMenu({ user }) {
           </div>
 
           <button
-            onClick={() => navigate('/history')}
+            onClick={() => {
+              setOpen(false)
+              navigate('/history')
+            }}
             style={{
               width: '100%',
               padding: '10px 15px',

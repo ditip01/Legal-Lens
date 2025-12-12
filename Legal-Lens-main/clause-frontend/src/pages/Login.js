@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from 'react'
+import { useState, useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { UserContext } from '../context/UserContext'
 import { Eye, EyeOff } from 'lucide-react'
@@ -16,8 +16,14 @@ export default function Login() {
     setMessage('')
 
     try {
-      console.log("API URL:", process.env.REACT_APP_API_URL);
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/login`, {
+      // Build resilient API base (fallback for local dev)
+      const rawBase = process.env.REACT_APP_API_URL
+      let apiBase = ''
+      if (rawBase && rawBase.startsWith('http')) apiBase = rawBase.replace(/\/$/, '')
+      else if (rawBase && rawBase.startsWith(':')) apiBase = `http://localhost${rawBase}`
+      else apiBase = rawBase || 'http://localhost:5000'
+
+      const response = await fetch(`${apiBase}/api/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -26,7 +32,8 @@ export default function Login() {
         }),
       })
 
-      const data = await response.json()
+      const contentType = response.headers.get('content-type') || ''
+      const data = contentType.includes('application/json') ? await response.json() : null
 
       if (response.ok) {
         loginUser(data.user, data.token)

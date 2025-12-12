@@ -9,6 +9,29 @@ import authenticateUser from "../middleware/authenticateUser.js";
 const router = express.Router();
 
 // ✅ Fetch analysis result
+// ✅ List uploads for authenticated user
+router.get("/", authenticateUser, async (req, res) => {
+  try {
+    const uploads = await Upload.find({ userId: req.user.id })
+      .sort({ uploadedAt: -1 })
+      .lean();
+
+    // Return simplified objects for the frontend
+    const result = uploads.map((u) => ({
+      uploadId: u._id,
+      fileName: u.fileName,
+      uploadedAt: u.uploadedAt,
+      analysisResult: u.analysisResult || null,
+    }));
+
+    return res.status(200).json(result);
+  } catch (err) {
+    console.error("❌ Error listing user uploads:", err);
+    return res.status(500).json({ error: "Server error listing uploads." });
+  }
+});
+
+// ✅ Fetch analysis result
 router.get("/:id", authenticateUser, async (req, res) => {
   const { id } = req.params;
 

@@ -36,6 +36,13 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/upload", uploadRoutes);
 app.use("/api/upload-status", uploadStatusRoutes);
 
+// Lightweight health check for debugging (no auth)
+app.get('/api/ping', (req, res) => {
+  res.json({ ok: true, time: new Date().toISOString(), msg: 'Backend ping' });
+});
+
+console.log('🔧 Mounted routes: /api, /api/admin, /api/upload, /api/upload-status');
+
 app.get("/", (req, res) => {
   res.send("✅ LegalLens backend running...");
 });

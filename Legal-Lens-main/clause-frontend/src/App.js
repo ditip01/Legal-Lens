@@ -9,6 +9,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { useContext, useEffect } from "react";
+import ProfileMenu from './components/ProfileMenu'
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Upload from "./pages/Upload";
@@ -17,7 +18,9 @@ import AdminHome from "./pages/AdminHome";
 import UserHome from "./pages/UserHome";
 import AnalysisResults from "./pages/AnalysisResults";
 import AnalysisLoading from "./pages/AnalysisLoading";
+import History from "./pages/History";
 import { UserContext, UserProvider } from "./context/UserContext";
+import AdminUploads from "./pages/AdminUploads";
 
 // ✅ PageTitle Component – updates document.title based on route
 function PageTitle() {
@@ -43,6 +46,7 @@ function PageTitle() {
 function Navbar() {
   const location = useLocation();
   const { user, isLoggedIn, logoutUser } = useContext(UserContext);
+  const navigate = useNavigate();
 
   return (
     <nav className="navbar">
@@ -83,31 +87,7 @@ function Navbar() {
       >
         {isLoggedIn ? (
           <>
-            {![
-              "/upload",
-              "/admin",
-              "/admin-home",
-              "/user-home",
-              "/analysis",
-            ].includes(location.pathname) && (
-              <li style={{ color: "#003366", fontWeight: 600 }}>
-                👋 Hello, <span className="highlight">{user?.name}</span>{" "}
-                <button
-                  onClick={logoutUser}
-                  style={{
-                    background: "none",
-                    border: "none",
-                    color: "#2077ff",
-                    cursor: "pointer",
-                    marginLeft: "5px",
-                    textDecoration: "underline",
-                    fontWeight: 500,
-                  }}
-                >
-                  Not you?
-                </button>
-              </li>
-            )}
+            {/* keep other nav items for logged-in users here if needed */}
           </>
         ) : (
           <>
@@ -140,6 +120,12 @@ function Navbar() {
               </Link>
             </li>
           </>
+        )}
+
+        {isLoggedIn && (
+          <li style={{ marginLeft: 'auto' }}>
+            <ProfileMenu user={user} />
+          </li>
         )}
       </ul>
     </nav>
@@ -223,6 +209,14 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+              <Route
+                path="/history"
+                element={
+                  <ProtectedRoute>
+                    <History />
+                  </ProtectedRoute>
+                }
+              />
               {/* ✅ New Route for analysis results */}
               <Route
                 path="/analysis/:uploadId"
@@ -255,6 +249,23 @@ function App() {
                 element={
                   <ProtectedRoute>
                     <AnalysisLoading />
+                  </ProtectedRoute>
+                }
+              />
+
+              <Route
+                path="/admin-uploads"
+                element={
+                  <ProtectedRoute>
+                    <AdminUploads />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/admin-uploads/:userId"
+                element={
+                  <ProtectedRoute>
+                    <AdminUploads />
                   </ProtectedRoute>
                 }
               />

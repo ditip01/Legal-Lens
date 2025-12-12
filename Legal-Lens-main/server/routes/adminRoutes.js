@@ -63,6 +63,23 @@ router.get('/uploads/:userId', verifyAdmin, async (req, res) => {
   }
 })
 
+// ✅ Get all uploads (Admins only) — include user info
+router.get('/uploads', verifyAdmin, async (req, res) => {
+  try {
+    const uploads = await Upload.find({})
+      .sort({ uploadedAt: -1 })
+      .populate('userId', 'name email')
+      .lean()
+
+    if (!uploads) return res.status(200).json([])
+
+    res.status(200).json(uploads)
+  } catch (err) {
+    console.error('❌ Error fetching all uploads:', err)
+    res.status(500).json({ message: 'Server error fetching uploads' })
+  }
+})
+
 // ✅ Delete a user + their uploads
 router.delete('/users/:id', verifyAdmin, async (req, res) => {
   try {
